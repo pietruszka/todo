@@ -31,3 +31,9 @@ code {
   align-items: center;
   gap: 16px;
 }
+
+.error-message {
+  border-radius: 4px;
+  border: 1px solid #d0460f;
+  padding: 32px;
+}
