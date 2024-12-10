@@ -21,7 +21,7 @@ TaskList.Item = ({
 	onRemove,
 }: { item: Todo; onClick: () => void; onRemove: () => void }) => {
 	return (
-		<div className="task-list-item-container">
+		<div className="task-list-item-container" data-testid="task-list-item">
 			<button
 				type="button"
 				className={cn("task-list-item", item.completed && "completed")}
