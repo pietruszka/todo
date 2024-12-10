@@ -3,9 +3,11 @@ import { TaskInputPanel } from "../../components/TaskInputPanel.tsx";
 import { TaskList } from "../../components/TaskList.tsx";
 import { useTodoStore } from "../../lib/TodoStore.tsx";
 import "./TaskListPanel.css";
+import { useTodos } from "../../lib/queries/useTodos.tsx";
 
 export function TodoListPanel() {
-	const { todos, markComplete, deleteTodo, addTodo } = useTodoStore();
+	const { markComplete, deleteTodo, addTodo } = useTodoStore();
+	const todos = useTodos();
 
 	return (
 		<div className="task-list-panel">

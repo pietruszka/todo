@@ -11,6 +11,7 @@
     "@types/node": "^16.18.120",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.3",
+    "axios": "^1.7.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -18,8 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-		"@biomejs/biome": "1.9.4"
-	},
+    "@biomejs/biome": "1.9.4"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

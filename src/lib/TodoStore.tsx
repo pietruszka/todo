@@ -6,6 +6,7 @@ interface TodoStore {
 }
 
 interface TodoContextStore extends TodoStore {
+	setTodos: (todos: Todo[]) => void;
 	addTodo: (title: Todo) => void;
 	markComplete: (id: Todo["id"]) => void;
 	deleteTodo: (id: Todo["id"]) => void;
@@ -13,6 +14,7 @@ interface TodoContextStore extends TodoStore {
 
 const initialContext: TodoContextStore = {
 	todos: [],
+	setTodos: () => {},
 	addTodo: () => {},
 	markComplete: () => {},
 	deleteTodo: () => {},
@@ -25,16 +27,13 @@ export function useTodoStore() {
 }
 
 export function TodoProvider({ children }: { children: React.ReactNode }) {
-	const [todos, setTodos] = React.useState<Todo[]>([
-		{ id: 1, title: "Task 1", completed: false },
-		{ id: 2, title: "Task 2", completed: false },
-		{ id: 3, title: "Task 3", completed: false },
-	]);
+	const [todos, setTodos] = React.useState<Todo[]>([]);
 
 	return (
 		<Context.Provider
 			value={{
 				todos,
+				setTodos,
 				addTodo,
 				markComplete,
 				deleteTodo,
