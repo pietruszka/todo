@@ -2,7 +2,10 @@ import { useState } from "react";
 import "./TaskInputPanel.css";
 import React from "react";
 
-export function TaskInputPanel({ onAdd }: { onAdd: (value: string) => void }) {
+export function TaskInputPanel({
+	disable,
+	onAdd,
+}: { disable: boolean; onAdd: (value: string) => void }) {
 	const [title, setTitle] = useState("");
 
 	return (
@@ -11,9 +14,10 @@ export function TaskInputPanel({ onAdd }: { onAdd: (value: string) => void }) {
 				type="text"
 				value={title}
 				placeholder="Add a task"
+				disabled={disable}
 				onChange={({ target: { value } }) => setTitle(value)}
 			/>
-			<button disabled={!title} type="button" onClick={acceptInput}>
+			<button disabled={!title || disable} type="button" onClick={acceptInput}>
 				Add
 			</button>
 		</div>
