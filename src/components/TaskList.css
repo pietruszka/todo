@@ -1,0 +1,32 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+.task-list-item {
+  border: 1px solid #8C7870;
+  padding: 4px 16px;
+  border-radius: 4px;
+  display: flex;
+  flex: 1;
+  cursor: pointer;
+}
+
+.task-list-item.completed {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #260D12;
+}
+
+.task-list-item-container {
+  display: flex;
+  width: 100%;
+  gap: 16px;  
+}
+
+.task-list-item-remove {
+  transition: all 0.2s;
+  cursor: pointer;
+}

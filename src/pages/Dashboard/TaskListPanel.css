@@ -1,0 +1,7 @@
+.task-list-panel {
+  max-width: 640px;
+  max-height: 640px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

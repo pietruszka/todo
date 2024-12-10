@@ -1,0 +1,24 @@
+.task-input-panel {
+  display: flex;
+  gap: 8px;
+  padding: 16px;
+}
+
+.task-input-panel input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #8C7870;
+  border-radius: 4px;
+}
+
+.task-input-panel button {
+  background-color: #402A25;
+  color: #F2F2F2;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-input-panel button:disabled {
+  background-color: #8C7870;
+  cursor: not-allowed;
+}
